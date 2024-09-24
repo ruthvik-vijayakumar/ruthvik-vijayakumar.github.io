@@ -10,7 +10,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@nuxt/image', '@nuxt/content'],
+  modules: ['@nuxt/image', '@nuxt/content', 'nuxt-gtag'],
+  gtag: {
+    id: 'GTM-PMBS54GL'
+  },
   app: {
     head: {
       title: "Ruthvik Vijaykaumar",
@@ -18,6 +21,6 @@ export default defineNuxtConfig({
         class: 'bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900',
       },
     },
-  },
+  }
 
 })
