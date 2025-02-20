@@ -5,11 +5,12 @@ const props = defineProps({
   role: String,
   company: String,
   roleDescription: Object,
-  relatedLinks:  Array,
+  relatedLinks: Array,
   skills: {
     type: Array,
     default: [],
   },
+  loading: Boolean
 });
 </script>
 
@@ -22,13 +23,13 @@ const props = defineProps({
         class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
       ></div>
       <header
-        class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
+        class="z-10 mb-2 mt-1 text-sm font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
         :aria-label="duration"
       >
         {{ duration }}
       </header>
       <div class="z-10 sm:col-span-6">
-        <h3 class="font-medium leading-snug text-slate-200">
+        <h3 class="font-medium text-slate-200">
           <div>
             <a
               class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
@@ -58,14 +59,16 @@ const props = defineProps({
             ></a>
           </div>
         </h3>
-        <p class="mt-2 leading-normal">
-          <ContentRenderer :value="roleDescription">
-            <template #empty>
-              <p>No content found.</p>
-            </template>
-            <ContentRendererMarkdown :value="roleDescription" />
-          </ContentRenderer>
-        </p>
+        <client-only>
+          <p class="mt-2">
+            <ContentRenderer :value="roleDescription">
+              <template #empty>
+                <p>No content found.</p>
+              </template>
+              <ContentRendererMarkdown :value="roleDescription" />
+            </ContentRenderer>
+          </p>
+        </client-only>
         <ul
           v-if="relatedLinks.length > 0"
           class="mt-2 flex flex-wrap"
@@ -91,10 +94,15 @@ const props = defineProps({
                 <path
                   d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"
                 ></path></svg
-              ><span>{{ link }}</span></a>
+              ><span>{{ link }}</span></a
+            >
           </li>
         </ul>
-        <ul v-if="skills.length > 0" class="mt-2 flex flex-wrap" aria-label="Technologies and Skills">
+        <ul
+          v-if="skills.length > 0"
+          class="mt-2 flex flex-wrap"
+          aria-label="Technologies and Skills"
+        >
           <li
             v-for="(skill, index_skill) in skills"
             :key="index_skill"
