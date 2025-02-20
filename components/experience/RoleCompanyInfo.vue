@@ -59,10 +59,12 @@ const props = defineProps({
           </div>
         </h3>
         <p class="mt-2 leading-normal">
-<!--          <ContentRenderer :value="roleDescription">-->
-<!--            <p>{{ roleDescription }}</p>-->
-            <ContentRendererMarkdown :value="roleDescription" class="text-sm" />
-<!--          </ContentRenderer>-->
+          <ContentRenderer :value="roleDescription">
+            <template #empty>
+              <p>No content found.</p>
+            </template>
+            <ContentRendererMarkdown :value="roleDescription" />
+          </ContentRenderer>
         </p>
         <ul
           v-if="relatedLinks.length > 0"
