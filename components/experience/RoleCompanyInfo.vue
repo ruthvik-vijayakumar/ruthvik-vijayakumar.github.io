@@ -4,7 +4,7 @@ const props = defineProps({
   link: String,
   role: String,
   company: String,
-  roleDescription: String,
+  roleDescription: Object,
   relatedLinks:  Array,
   skills: {
     type: Array,
