@@ -1,5 +1,6 @@
 <template>
   <header
+    :data-scroll="props.currentSection"
     class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-4/12 lg:flex-col lg:justify-between lg:py-24"
   >
     <div>
@@ -25,7 +26,7 @@
         >
           <span>
             View Full
-            <span class="inline-block ">
+            <span class="inline-block">
               Resume
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,11 +54,19 @@
             >
               <span
                 :class="[
+                  props.currentScroll === link.link
+                    ? 'w-16 text-teal-200 bg-teal-200'
+                    : 'text-slate-500',
                   'nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none',
                 ]"
               />
               <span
-                class="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
+                :class="[
+                  props.currentScroll === link.link
+                    ? 'text-teal-200'
+                    : 'text-slate-500',
+                  'nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200',
+                ]"
                 >{{ link.text }}
               </span>
             </a>
@@ -205,6 +214,12 @@ const links = [
     link: "projects",
   },
 ];
+
+const props = defineProps(["currentScroll"]);
+
+watch(props, (val) => {
+  console.log(val);
+});
 
 const current_section = (val) => {
   return val === hash.substring(1);

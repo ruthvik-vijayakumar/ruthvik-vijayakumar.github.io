@@ -2,6 +2,7 @@
 import Projects from "~/components/Projects.vue";
 const mouseX = ref(0);
 const mouseY = ref(0);
+const currentAnchor = ref("");
 
 const updateMousePosition = (event: { pageX: number; pageY: number }) => {
   // Use pageX and pageY to account for scrolling
@@ -10,8 +11,23 @@ const updateMousePosition = (event: { pageX: number; pageY: number }) => {
 };
 
 onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.target.tagName === "SECTION") {
+          currentAnchor.value = entry.target.id;
+        }
+      });
+    },
+    { threshold: 0.5 },
+  ); // Fires when at least 50% of the element is visible
+  document.querySelectorAll("#content")[0].childNodes.forEach((section) => {
+    observer.observe(section);
+  });
+
   window.addEventListener("mousemove", updateMousePosition);
 });
+
 onUnmounted(() => {
   window.removeEventListener("mousemove", updateMousePosition);
 });
@@ -39,7 +55,7 @@ const divStyle = computed(() => {
       class="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-20 lg:py-0"
     >
       <div class="lg:flex lg:justify-between lg:gap-2">
-        <Nav />
+        <Nav :current-scroll="currentAnchor" />
         <main id="content" class="pt-24 lg:w-7/12 lg:py-24">
           <About />
           <Experience />
