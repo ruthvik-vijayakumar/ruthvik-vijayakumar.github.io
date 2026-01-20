@@ -59,7 +59,7 @@ const divStyle = computed(() => {
         <main id="content" class="pt-24 lg:w-7/12 lg:py-24">
           <About />
           <Experience />
-          <Publications />
+          <!-- <Publications /> -->
           <Projects />
           <Footer />
         </main>
