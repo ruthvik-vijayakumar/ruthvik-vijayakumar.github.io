@@ -16,10 +16,10 @@ const props = defineProps({
             <div class="z-10 sm:order-2 sm:col-span-6">
                 <h3>
                     <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                        href="https://spotify-profile.herokuapp.com/" target="_blank" rel="noreferrer noopener"
-                        aria-label="Spotify Profile (opens in a new tab)"><span
+                        :href="link" target="_blank" rel="noreferrer noopener"
+                        :aria-label="`${title} (opens in a new tab)`"><span
                             class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span><span>Spotify
-                            <span class="inline-block">Profile<svg xmlns="http://www.w3.org/2000/svg"
+                            <span class="inline-block">{{ title }}<svg xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20" fill="currentColor"
                                     class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
                                     aria-hidden="true">
@@ -29,50 +29,28 @@ const props = defineProps({
                                 </svg></span></span></a>
                 </h3>
                 <p class="mt-2 text-sm leading-normal">
-                    Web app for visualizing personalized Spotify data. View your top
-                    artists, top tracks, recently played tracks, and detailed audio
-                    information about each track. Create and save new playlists of
-                    recommended tracks based on your existing playlists and more.
+                    {{ description }}
                 </p>
                 <a class="relative mt-2 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
-                    href="https://github.com/bchiang7/spotify-profile" target="_blank" rel="noreferrer noopener"
-                    aria-label="648 stars on GitHub (opens in a new tab)"><svg xmlns="http://www.w3.org/2000/svg"
+                    :href="gh_link" target="_blank" rel="noreferrer noopener"
+                    :aria-label="`${title} on GitHub (opens in a new tab)`"><svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20" fill="currentColor" class="mr-1 h-3 w-3" aria-hidden="true">
-                        <path fill-rule="evenodd"
-                            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                            clip-rule="evenodd"></path>
-                    </svg><span>648</span></a>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10 2C5.58 2 2 5.58 2 10c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 18 10c0-4.42-3.58-8-8-8z" />
+                    </svg></a>
                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used:">
                     <li class="mr-1.5 mt-2">
-                        <div
+                        <div v-for="(tool_tech, index) in tools_tech" :key="index"
                             class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                            React
-                        </div>
-                    </li>
-                    <li class="mr-1.5 mt-2">
-                        <div
-                            class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                            Express
-                        </div>
-                    </li>
-                    <li class="mr-1.5 mt-2">
-                        <div
-                            class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                            Spotify API
-                        </div>
-                    </li>
-                    <li class="mr-1.5 mt-2">
-                        <div
-                            class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                            Heroku
+                            {{ tool_tech }}
                         </div>
                     </li>
                 </ul>
             </div>
-            <img alt="Spotify Profile app homepage" loading="lazy" width="200" height="48" decoding="async"
-                data-nimg="1"
-                class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                style="color: transparent" />
+                <img :alt="title" loading="lazy" width="200" height="48" decoding="async"
+                    :src="image"
+                    class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                    style="color: transparent" />
         </div>
     </li>
 </template>
