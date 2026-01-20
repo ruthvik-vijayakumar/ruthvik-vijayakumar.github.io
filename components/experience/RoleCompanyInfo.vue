@@ -10,7 +10,7 @@ const props = defineProps({
     type: Array,
     default: [],
   },
-  loading: Boolean
+  loading: Boolean,
 });
 </script>
 
@@ -61,11 +61,8 @@ const props = defineProps({
         </h3>
         <client-only>
           <p class="mt-2">
-            <ContentRenderer :value="roleDescription">
-              <template #empty>
-                <p>No content found.</p>
-              </template>
-              <ContentRendererMarkdown :value="roleDescription" />
+            <ContentRenderer :value="roleDescription" :excerpt="true">
+              {{ roleDescription }}
             </ContentRenderer>
           </p>
         </client-only>

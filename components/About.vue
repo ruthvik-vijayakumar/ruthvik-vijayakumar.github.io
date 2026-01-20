@@ -60,15 +60,11 @@
         These days, I’ve been working on multiple ideas for tech products, but
         I’m actively involved in building a SaaS knowledge management tool
         powered by LLMs. It’s designed to help knowledge workers streamline
-        their workflow and work more efficiently. The goal is to take the
-        friction out of managing and accessing information so professionals can
-        focus on what truly matters.
+        their workflow and work more efficiently.
       </p>
       <p>
         When I’m not deep in a product rabbit hole, I’m probably in one of many
-        subreddits' I follow, keeping up with the latest tech trends, or
-        perfecting my hummus recipe.
-
+        subreddits' I follow, or probably cooking your favourite dish with some extra spice.
         <!--        <span-->
         <!--          class="group/korok inline-flex lg:cursor-[url('/images/koroks/Elma.png'),_pointer] lg:font-medium lg:text-slate-200"-->
         <!--          ><span class="sr-only">Korok seeds</span-->

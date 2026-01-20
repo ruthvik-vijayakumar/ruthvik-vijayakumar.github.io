@@ -10,7 +10,7 @@
       <h2
         class="mt-3 text-md font-medium tracking-tight text-slate-200 sm:text-xl"
       >
-        Full Stack Developer & Aspiring Product Manager
+        Technical Product Manager & Full Stack Product Development
       </h2>
       <p class="mt-4 max-w-xs leading-normal">
         I build engaging, intuitive and pragmatic products for people.

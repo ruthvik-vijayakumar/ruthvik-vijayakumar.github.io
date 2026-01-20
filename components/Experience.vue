@@ -16,6 +16,7 @@ const duration = (
 </script>
 
 <template>
+<!--  <h1 class="text-lg font-bold uppercase tracking-wider pb-4 text-teal-200">Experience</h1>-->
   <section
     id="experience"
     class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
@@ -39,7 +40,7 @@ const duration = (
           :link="data['link']"
           :related-links="data['external_links']"
           :role="data['role']"
-          :role-description="data"
+          :role-description="data['description']"
           :skills="data['skills']"
         />
       </ol>
