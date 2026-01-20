@@ -38,19 +38,21 @@ const props = defineProps({
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M10 2C5.58 2 2 5.58 2 10c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 18 10c0-4.42-3.58-8-8-8z" />
                     </svg></a>
+
+
+
                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used:">
-                    <li class="mr-1.5 mt-2">
-                        <div v-for="(tool_tech, index) in tools_tech" :key="index"
+                    <li v-for="(tool_tech, index) in tools_tech" :key="index" class="mr-1.5 mt-2">
+                        <div 
                             class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
                             {{ tool_tech }}
                         </div>
-                    </li>
+                    </li>  
                 </ul>
             </div>
-                <img :alt="title" loading="lazy" width="200" height="48" decoding="async"
-                    :src="image"
-                    class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                    style="color: transparent" />
+            <img :alt="title" loading="lazy" width="200" height="48" decoding="async" :src="image"
+                class="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                style="color: transparent" />
         </div>
     </li>
 </template>
