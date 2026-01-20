@@ -202,12 +202,12 @@ const links = [
     link: "about",
   },
   {
-    text: "Experience",
-    link: "experience",
-  },
-  {
     text: "Projects & Portfolio",
     link: "projects",
+  },
+  {
+    text: "Experience",
+    link: "experience",
   },
 ];
 
