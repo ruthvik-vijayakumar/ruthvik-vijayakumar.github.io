@@ -3,7 +3,7 @@ const props = defineProps({
     title: String,
     link: String,
     tools_tech: Array,
-    description: String
+    description: Object
 });
 </script>
 <template>
@@ -29,7 +29,8 @@ const props = defineProps({
                                 </svg></span></span></a>
                 </h3>
                 <p class="mt-2 text-sm leading-normal">
-                    {{ description }}
+                    <ContentRenderer :value="description" :excerpt="true">
+                    </ContentRenderer>
                 </p>
                 <a class="relative mt-2 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
                     :href="gh_link" target="_blank" rel="noreferrer noopener"
@@ -43,11 +44,11 @@ const props = defineProps({
 
                 <ul class="mt-2 flex flex-wrap" aria-label="Technologies used:">
                     <li v-for="(tool_tech, index) in tools_tech" :key="index" class="mr-1.5 mt-2">
-                        <div 
+                        <div
                             class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
                             {{ tool_tech }}
                         </div>
-                    </li>  
+                    </li>
                 </ul>
             </div>
             <img :alt="title" loading="lazy" width="200" height="48" decoding="async" :src="image"

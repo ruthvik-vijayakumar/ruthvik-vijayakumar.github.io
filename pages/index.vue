@@ -58,9 +58,9 @@ const divStyle = computed(() => {
         <Nav :current-scroll="currentAnchor" />
         <main id="content" class="pt-24 lg:w-7/12 lg:py-24">
           <About />
+          <Projects />
           <Experience />
           <!-- <Publications /> -->
-          <Projects />
           <Footer />
         </main>
       </div>
