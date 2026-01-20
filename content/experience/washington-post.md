@@ -1,6 +1,7 @@
 ---
 company: "The Washington Post"
 link: "https://www.washingtonpost.com/"
+external_links: []
 role: "Product Management Intern, Ads Monetization"
 start_date: "2025-06-09"
 end_date: "2025-08-23"

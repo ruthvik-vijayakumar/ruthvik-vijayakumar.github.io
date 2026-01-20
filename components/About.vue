@@ -23,7 +23,6 @@
         chasing that feeling ever since. Over the years, I’ve worked across
         <a
           class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-          href="https://us.mullenlowe.com/"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="advertising agency (opens in a new tab)"
@@ -31,7 +30,6 @@
         >,
         <a
           class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-          href="https://us.mullenlowe.com/"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="advertising agency (opens in a new tab)"
@@ -39,7 +37,6 @@
         >,
         <a
           class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
-          href="https://us.mullenlowe.com/"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="advertising agency (opens in a new tab)"
@@ -59,7 +56,10 @@
       <p class="mb-4">
         These days, I’ve been working on multiple ideas for tech products, but
         I’m actively involved in building a SaaS knowledge management tool
-        powered by LLMs. It’s designed to help knowledge workers streamline
+        powered by LLMs called <a class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
+          target="_blank"
+          rel="noreferrer noopener"
+          aria-label="advertising agency (opens in a new tab)" href="https://nabuai.me">NabuAI</a>. It’s designed to help knowledge workers streamline
         their workflow and work more efficiently.
       </p>
       <p>
