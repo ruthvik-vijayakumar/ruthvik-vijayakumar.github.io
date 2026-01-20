@@ -206,10 +206,6 @@ const links = [
     link: "experience",
   },
   {
-    text: "Publications",
-    link: "publications",
-  },
-  {
     text: "Projects & Portfolio",
     link: "projects",
   },
