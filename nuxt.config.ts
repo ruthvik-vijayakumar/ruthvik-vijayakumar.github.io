@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     prerender: {
       failOnError: false,
       crawlLinks: true,
-      routes: ["/", "/projects", "/experience", "/blog"],
+      routes: ["/", "/portfolio", "/experience", "/blog"],
     },
   },
   modules: ["@nuxt/image", "@nuxt/content", "nuxt-gtag"],

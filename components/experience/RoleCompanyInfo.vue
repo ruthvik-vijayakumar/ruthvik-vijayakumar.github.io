@@ -35,7 +35,7 @@ defineProps({
       <li
         v-for="(skill, i) in skills"
         :key="i"
-        class="rounded-full bg-slate-100 dark:bg-slate-700 px-3 py-1 text-xs text-slate-600 dark:text-slate-300"
+        class="rounded-full bg-slate-100 dark:bg-slate-700 px-3 py-1 text-sm text-slate-600 dark:text-slate-300"
       >
         {{ skill }}
       </li>

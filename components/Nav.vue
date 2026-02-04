@@ -19,10 +19,10 @@ const { isDark, toggle } = useDarkMode();
           About
         </NuxtLink>
         <NuxtLink
-          to="/projects"
+          to="/portfolio"
           class="text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300"
         >
-          Projects
+          Portfolio
         </NuxtLink>
         <NuxtLink
           to="/experience"
