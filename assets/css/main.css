@@ -2,4 +2,153 @@
 @tailwind components;
 @tailwind utilities;
 
-body { font-size: inherit; }
+/* Normalized type scale (single source of truth) */
+:root {
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --leading-base: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable; /* reserve space for scrollbar to prevent layout shift */
+  font-family: "Yrsa", serif;
+}
+
+body {
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  font-family: inherit;
+}
+
+/* Flare background: multi-colored, diffuse, from center */
+.bg-flares {
+  position: relative;
+  background-color: var(--flare-bg, #fff);
+}
+
+.bg-flares::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(ellipse 120% 120% at 50% 0%, rgba(147, 51, 234, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 100% at 50% 0%, rgba(168, 85, 247, 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse 110% 110% at 50% 0%, rgba(236, 72, 153, 0.05) 0%, transparent 48%),
+    radial-gradient(ellipse 90% 90% at 50% 0%, rgba(59, 130, 246, 0.04) 0%, transparent 42%),
+    radial-gradient(ellipse 95% 95% at 50% 0%, rgba(251, 146, 60, 0.04) 0%, transparent 44%);
+}
+
+.dark .bg-flares {
+  --flare-bg: #0f172a;
+}
+
+.dark .bg-flares::before {
+  background-image:
+    radial-gradient(ellipse 120% 120% at 50% 0%, rgba(147, 51, 234, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 100% at 50% 0%, rgba(168, 85, 247, 0.09) 0%, transparent 45%),
+    radial-gradient(ellipse 110% 110% at 50% 0%, rgba(236, 72, 153, 0.07) 0%, transparent 48%),
+    radial-gradient(ellipse 90% 90% at 50% 0%, rgba(59, 130, 246, 0.06) 0%, transparent 42%),
+    radial-gradient(ellipse 95% 95% at 50% 0%, rgba(251, 146, 60, 0.05) 0%, transparent 44%);
+}
+
+/* Blog prose: spacing, full-width images, bordered tables */
+.blog-prose {
+  max-width: 100%;
+}
+
+.blog-prose > * + * {
+  margin-top: 1.25rem;
+}
+
+.blog-prose h1 { font-size: var(--text-2xl); font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+.blog-prose h2 { font-size: var(--text-xl); font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.5rem; }
+.blog-prose h3 { font-size: var(--text-lg); font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+
+.blog-prose p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-prose ul, .blog-prose ol {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.blog-prose li + li {
+  margin-top: 0.35rem;
+}
+
+.blog-prose img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.375rem;
+}
+
+.blog-prose pre {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 0.375rem;
+}
+
+.blog-prose :not(pre) > code {
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+.blog-prose blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid;
+  @apply border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-400;
+}
+
+.blog-prose hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 1px solid;
+  @apply border-slate-200 dark:border-slate-700;
+}
+
+/* Tables: full borders and spacing */
+.blog-prose table {
+  width: 100%;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-collapse: collapse;
+  border: 1px solid;
+  @apply border-slate-300 dark:border-slate-600;
+}
+
+.blog-prose th,
+.blog-prose td {
+  border: 1px solid;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  @apply border-slate-300 dark:border-slate-600;
+}
+
+.blog-prose th {
+  font-weight: 600;
+  @apply bg-slate-100 dark:bg-slate-800;
+}
+
+.blog-prose a {
+  @apply text-purple-600 dark:text-purple-400 hover:underline;
+}

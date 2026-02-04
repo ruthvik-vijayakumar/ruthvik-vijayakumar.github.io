@@ -1,13 +1,13 @@
 <template>
   <div
-    class="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900 h-screen"
+    class="font-sans bg-white leading-relaxed text-slate-700 antialiased selection:bg-purple-100 selection:text-slate-900 dark:bg-slate-900 dark:text-slate-300 dark:selection:bg-purple-900/60 dark:selection:text-slate-100 min-h-screen"
   >
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage :key="$route.fullPath" />
     </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
-const router = useRouter();
+const route = useRoute();
 </script>
