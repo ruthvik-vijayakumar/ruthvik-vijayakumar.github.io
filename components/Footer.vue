@@ -7,7 +7,7 @@
       ·
       <a href="https://instagram.com/coderuth" target="_blank" rel="noreferrer noopener" class="hover:text-slate-700 dark:hover:text-slate-200">Instagram</a>
       ·
-      <a href="https://twitter.com/coderuth" target="_blank" rel="noreferrer noopener" class="hover:text-slate-700 dark:hover:text-slate-200">Twitter</a>
+      <a href="https://x.com/coderuth" target="_blank" rel="noreferrer noopener" class="hover:text-slate-700 dark:hover:text-slate-200">X</a>
     </p>
     <p>
       Built with <a href="https://nuxt.com" target="_blank" rel="noreferrer noopener" class="hover:text-slate-700 dark:hover:text-slate-200">Nuxt</a>

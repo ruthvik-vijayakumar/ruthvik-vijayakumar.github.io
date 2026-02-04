@@ -13,6 +13,10 @@
   --leading-base: 1.6;
 }
 
+.dark {
+  --bg-dark: #0d0d0d;
+}
+
 html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable; /* reserve space for scrollbar to prevent layout shift */
