@@ -1,5 +1,13 @@
 <script setup>
 const { isDark, toggle } = useDarkMode();
+const { gtag } = useGtag();
+
+function onResumeClick() {
+  gtag("event", "resume_click", {
+    event_category: "nav",
+    event_label: "Resume",
+  });
+}
 </script>
 
 <template>
@@ -41,6 +49,7 @@ const { isDark, toggle } = useDarkMode();
           target="_blank"
           rel="noreferrer noopener"
           class="inline-flex items-center gap-1 text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300"
+          @click="onResumeClick"
         >
           Resume
           <svg
