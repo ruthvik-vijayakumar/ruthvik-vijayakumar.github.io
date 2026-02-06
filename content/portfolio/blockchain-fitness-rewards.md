@@ -3,6 +3,7 @@ title: "RepNation - Community Fitness Rewards Platform"
 link: "#"
 date: 2024-05-01
 type: project
+visible: false
 tools_tech:
   ["Blockchain", "Smart Contracts", "Social Challenges", "Digital Incentives", "Fitness Tracking"]
 ---

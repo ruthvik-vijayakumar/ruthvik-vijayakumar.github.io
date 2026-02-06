@@ -8,7 +8,9 @@ const portfolio = await useAsyncData("portfolio", () =>
 const activeFilter = ref<"all" | "project" | "case_study">("all");
 
 const filteredPortfolio = computed(() => {
-  const items = portfolio.data.value ?? [];
+  const items = (portfolio.data.value ?? []).filter(
+    (item: { visible?: boolean }) => item.visible !== false,
+  );
   if (activeFilter.value === "all") return items;
   return items.filter((item: { type?: string }) => (item.type ?? "project") === activeFilter.value);
 });
@@ -42,7 +44,7 @@ const filters = [
         </button>
       </template>
     </div>
-    <ul class="space-y-10">
+    <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-2">
       <ProjectItem
         v-for="(project, index) in filteredPortfolio"
         :key="project._path ?? index"
@@ -51,6 +53,7 @@ const filters = [
         :doc="project"
         :tools_tech="project.tools_tech"
         :attachments="project.attachments"
+        :item-type="project.type ?? 'project'"
       />
     </ul>
   </section>
