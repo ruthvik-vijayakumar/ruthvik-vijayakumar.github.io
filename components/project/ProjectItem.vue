@@ -35,38 +35,40 @@ function onReadMoreClick() {
 
 <template>
   <li
-    class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md dark:border-slate-700 dark:bg-slate-800/50 dark:hover:border-slate-600"
+    class="flex min-h-0 flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md dark:border-slate-700 dark:bg-slate-800/50 dark:hover:border-slate-600"
   >
-    <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">
-      <a
-        :href="link"
-        target="_blank"
-        rel="noreferrer noopener"
-        class="hover:underline"
-        :aria-label="`${title} (opens in new tab)`"
-      >
-        {{ title }}
-      </a>
-    </h3>
-    <div class="relative mt-1">
-      <div
-        class="text-base text-slate-600 dark:text-slate-400 leading-relaxed"
-        :class="expanded ? '' : 'max-h-[7.5em] overflow-hidden'"
-      >
-        <ContentRenderer v-if="doc" :value="doc" />
+    <div class="flex min-h-0 flex-1 flex-col">
+      <h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">
+        <a
+          :href="link"
+          target="_blank"
+          rel="noreferrer noopener"
+          class="hover:underline"
+          :aria-label="`${title} (opens in new tab)`"
+        >
+          {{ title }}
+        </a>
+      </h3>
+      <div class="relative mt-1">
+        <div
+          class="text-base text-slate-600 dark:text-slate-400 leading-relaxed"
+          :class="expanded ? '' : 'max-h-[7.5em] overflow-hidden'"
+        >
+          <ContentRenderer v-if="doc" :value="doc" />
+        </div>
+        <button
+          type="button"
+          class="mt-1 text-sm font-medium text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 hover:underline"
+          @click="onReadMoreClick"
+        >
+          {{ expanded ? "Read less" : "Read more" }}
+        </button>
       </div>
-      <button
-        type="button"
-        class="mt-1 text-sm font-medium text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300 hover:underline"
-        @click="onReadMoreClick"
-      >
-        {{ expanded ? "Read less" : "Read more" }}
-      </button>
+      <p v-if="tools_tech?.length" class="mt-2 text-sm text-slate-500 dark:text-slate-500">
+        {{ tools_tech.join(", ") }}
+      </p>
     </div>
-    <p v-if="tools_tech?.length" class="mt-2 text-sm text-slate-500 dark:text-slate-500">
-      {{ tools_tech.join(", ") }}
-    </p>
-    <div v-if="attachments?.length" class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700">
+    <div v-if="attachments?.length" class="mt-auto border-t border-slate-200 pt-3 dark:border-slate-700">
       <p class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Attachments</p>
       <ul class="flex flex-wrap gap-3">
         <li v-for="(att, i) in attachments" :key="i">

@@ -3,6 +3,7 @@ title: "Spotify Strategic Analysis & Recommendations"
 link: "/spotify-final-report.pdf"
 date: 2024-01-15
 type: case_study
+visible: true
 tools_tech:
   ["Data Analytics", "Market Analysis", "Financial Analysis", "KPI Design", "Strategic Recommendations"]
 attachments:

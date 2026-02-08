@@ -4,6 +4,7 @@ link: "https://www.nabuai.me/"
 gh_link: "https://github.com/ruthvik-vijayakumar/nabu-ui"
 date: 2024-06-01
 type: project
+visible: true
 tools_tech:
   ["GraphRAG", "GPT-OSS", "PGVector", "PostgresDB", "Supabase", "Vue.js", "Tailwind CSS"]
 attachments:

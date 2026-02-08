@@ -13,6 +13,11 @@ function onResumeClick() {
 <template>
   <header class="mb-16 flex flex-wrap items-start justify-between gap-6">
     <div>
+      <img
+        src="/profile.png"
+        alt="Ruthvik Vijayakumar"
+        class="mb-4 h-16 w-16 rounded-lg object-cover ring-1 ring-slate-200/50 dark:ring-slate-600/50"
+      />
       <h1 class="text-xl font-semibold tracking-tight text-slate-800 dark:text-slate-100 ">
         Hi, I'm <a href="/" class="hover:opacity-80">Ruthvik Vijayakumar</a>
       </h1>

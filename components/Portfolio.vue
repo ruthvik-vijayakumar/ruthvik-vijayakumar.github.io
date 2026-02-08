@@ -1,18 +1,46 @@
 <script setup lang="ts">
 import ProjectItem from "~/components/project/ProjectItem.vue";
 
+/** Portfolio item from content collection (frontmatter + path) */
+interface PortfolioItem {
+  path?: string;
+  _path?: string;
+  title?: string;
+  link?: string;
+  date?: string | Date;
+  tools_tech?: string[];
+  attachments?: Array<{ url: string; label?: string; icon?: string }>;
+  type?: string;
+  visible?: boolean;
+  meta?: Record<string, unknown>;
+  [key: string]: unknown;
+}
+
+/** Get field from item (top-level or meta; Nuxt Content v3 may put frontmatter in meta) */
+function getProjectField<T>(item: PortfolioItem, key: string): T | undefined {
+  const val = item[key] ?? (item.meta as Record<string, unknown>)?.[key];
+  return val as T | undefined;
+}
+
 const portfolio = await useAsyncData("portfolio", () =>
-  queryContent("portfolio").sort({ date: -1 }).find(),
+  queryCollection("portfolio").all().then((r) => (r as unknown) as PortfolioItem[]),
 );
 
 const activeFilter = ref<"all" | "project" | "case_study">("all");
 
 const filteredPortfolio = computed(() => {
-  const items = (portfolio.data.value ?? []).filter(
-    (item: { visible?: boolean }) => item.visible !== false,
-  );
+  const raw = (portfolio.data.value ?? []) as PortfolioItem[];
+  const items = raw
+    .filter((item) => getProjectField<boolean>(item, "visible") !== false)
+    .sort((a, b) => {
+      const da = getProjectField<string | Date>(a, "date");
+      const db = getProjectField<string | Date>(b, "date");
+      const ta = da ? new Date(da).getTime() : 0;
+      const tb = db ? new Date(db).getTime() : 0;
+      return tb - ta;
+    });
   if (activeFilter.value === "all") return items;
-  return items.filter((item: { type?: string }) => (item.type ?? "project") === activeFilter.value);
+  return items.filter((item) => (getProjectField<string>(item, "type") ?? "project") === activeFilter.value);
 });
 
 const filters = [
@@ -47,13 +75,13 @@ const filters = [
     <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-2">
       <ProjectItem
         v-for="(project, index) in filteredPortfolio"
-        :key="project._path ?? index"
-        :title="project.title"
-        :link="project.link"
+        :key="project.path ?? project._path ?? index"
+        :title="getProjectField(project, 'title') ?? ''"
+        :link="getProjectField(project, 'link') ?? ''"
         :doc="project"
-        :tools_tech="project.tools_tech"
-        :attachments="project.attachments"
-        :item-type="project.type ?? 'project'"
+        :tools_tech="(getProjectField(project, 'tools_tech') ?? project.tools_tech) ?? []"
+        :attachments="(getProjectField(project, 'attachments') ?? project.attachments) ?? []"
+        :item-type="getProjectField(project, 'type') ?? 'project'"
       />
     </ul>
   </section>
