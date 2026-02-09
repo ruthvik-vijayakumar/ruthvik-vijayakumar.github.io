@@ -11,20 +11,60 @@ function onResumeClick() {
 </script>
 
 <template>
-  <header class="mb-16 flex flex-wrap items-start justify-between gap-6">
-    <div>
-      <img
-        src="/profile.png"
-        alt="Ruthvik Vijayakumar"
-        class="mb-4 h-16 w-16 rounded-lg object-cover ring-1 ring-slate-200/50 dark:ring-slate-600/50"
-      />
-      <h1 class="text-xl font-semibold tracking-tight text-slate-800 dark:text-slate-100 ">
-        Hi, I'm <a href="/" class="hover:opacity-80">Ruthvik Vijayakumar</a>
-      </h1>
-      <p class="mt-1 text-base text-slate-600 dark:text-slate-400">
-        Technical Product Manager & Full Stack Product Engineer
-      </p>
-      <nav class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-1 text-base font-bold">
+  <header class="mb-16">
+    <div class="flex flex-nowrap items-start justify-between gap-4">
+      <div class="min-w-0">
+        <img
+          src="/profile.png"
+          alt="Ruthvik Vijayakumar"
+          class="mb-4 h-16 w-16 rounded-lg object-cover ring-1 ring-slate-200/50 dark:ring-slate-600/50"
+        />
+        <h1 class="text-xl font-semibold tracking-tight text-slate-800 dark:text-slate-100 ">
+          Hi, I'm <a href="/" class="hover:opacity-80">Ruthvik Vijayakumar</a>
+        </h1>
+        <p class="mt-1 text-base text-slate-600 dark:text-slate-400">
+          Technical Product Manager & Full Stack Product Engineer
+        </p>
+      </div>
+      <button
+        type="button"
+        aria-label="Toggle night mode"
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-200 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-200"
+        @click="toggle"
+      >
+        <span v-if="isDark" class="sr-only">Switch to light mode</span>
+        <span v-else class="sr-only">Switch to night mode</span>
+        <!-- Sun (show in dark mode to switch to light) -->
+        <svg
+          v-if="isDark"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-5 w-5 shrink-0"
+          aria-hidden="true"
+        >
+          <path
+            d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
+          />
+        </svg>
+        <!-- Moon (show in light mode to switch to dark) -->
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-5 w-5 shrink-0"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+    <nav class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-1 text-base font-bold">
         <NuxtLink
           to="/"
           class="text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300"
@@ -76,44 +116,6 @@ function onResumeClick() {
             />
           </svg>
         </a>
-      </nav>
-    </div>
-    <button
-      type="button"
-      aria-label="Toggle night mode"
-      class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-200 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-200"
-      @click="toggle"
-    >
-      <span v-if="isDark" class="sr-only">Switch to light mode</span>
-      <span v-else class="sr-only">Switch to night mode</span>
-      <!-- Sun (show in dark mode to switch to light) -->
-      <svg
-        v-if="isDark"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        class="h-5 w-5 shrink-0"
-        aria-hidden="true"
-      >
-        <path
-          d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
-        />
-      </svg>
-      <!-- Moon (show in light mode to switch to dark) -->
-      <svg
-        v-else
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        class="h-5 w-5 shrink-0"
-        aria-hidden="true"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </button>
+    </nav>
   </header>
 </template>
