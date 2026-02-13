@@ -69,7 +69,7 @@ function onResumeClick() {
           to="/"
           class="text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300"
         >
-          About
+          About Me
         </NuxtLink>
         <NuxtLink
           to="/portfolio"

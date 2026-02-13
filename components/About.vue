@@ -2,7 +2,7 @@
 
 <template>
   <section id="about" class="mb-20 scroll-mt-16" aria-label="About me">
-    <h2 class="mb-6 text-lg font-semibold text-slate-900 dark:text-slate-100">About</h2>
+    <h2 class="mb-6 text-lg font-semibold text-slate-900 dark:text-slate-100">About Me</h2>
     <div class="space-y-4 text-base text-slate-700 dark:text-slate-300 leading-relaxed">
       <p>
         Ever since I took part in my first hackathon, I fell in love with
