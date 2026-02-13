@@ -78,3 +78,23 @@ AI‑driven virality and story‑moment detection plus community curation, where
 ## Key User Journeys
 
 :miro-customer-journey
+
+## Go‑to‑market and marketing efforts
+#### Ideal target segments (sequenced)
+- Early adopter creators and indie podcasters
+    - Pain: need viral clips and better discovery but can’t afford expensive video teams.
+    - Tactic: 
+        -  Outreach to 50–100 indie shows in specific verticals (e.g., tech / business /  self‑improvement).
+        - Offer free clipping + discovery analytics for 3–6 months in exchange for feedback and promotion.
+- Listeners in specific verticals (focus on “learning” podcasts)
+Overlaps with Snipd / productivity community, but with a discovery focus.
+    - Tactic:
+      - Launch themed feeds (“AI & Startups”, “Health & Wellness Stories”).
+      - Run content partnerships with a handful of known shows in each theme.
+- Agencies and networks
+    - Tactic: show case studies on how “clip discovery” increases full‑episode plays and social engagement vs traditional clipping only.
+
+#### Channels & tactics
+- **Content marketing and case studies:** Write “How we turned 1 hour of podcast into 10K extra listens via clip discovery” breakdowns, benchmarked against existing clipping tools.
+- **Social proof flywheel:** Auto‑generate branded videos for TikTok/Reels with “Discover more clips like this on **Clipped**” overlays, driving organic installs.
+- **Product‑led growth:** Free listener app; creators get basic analytics (top clips, topics) for free, with paid tiers for more depth.
