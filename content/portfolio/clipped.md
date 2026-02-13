@@ -1,7 +1,7 @@
 ---
 title: Clipped - Short form podcast discovery
 attachments:
-  - url: "/blog/welcome"
+  - url: "/blog/clipped-short-form-podcast-discovery"
     label: Blog Post
     icon: link
 date: 2024-01-15

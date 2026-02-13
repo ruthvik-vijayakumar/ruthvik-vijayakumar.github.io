@@ -17,6 +17,7 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string().optional(),
         date: z.union([z.string(), z.date()]).optional(),
+        image: z.string().optional(),
       }),
     }),
     experience: defineCollection({

@@ -25,7 +25,8 @@ export default defineNuxtConfig({
       routes: ["/", "/portfolio", "/experience", "/blog"],
     },
   },
-  modules: ["@nuxt/image", "@nuxt/content", "nuxt-gtag", "nuxt-studio"],
+  // nuxt-studio
+  modules: ["@nuxt/image", "@nuxt/content", "nuxt-gtag", "@nuxtjs/mdc"],
   studio: {
     // Studio admin route (default: '/_studio')
     route: '/_studio',

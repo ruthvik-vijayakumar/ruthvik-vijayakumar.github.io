@@ -64,7 +64,7 @@ function onReadMoreClick() {
           {{ expanded ? "Read less" : "Read more" }}
         </button>
       </div>
-      <p v-if="tools_tech?.length" class="mt-2 text-sm text-slate-500 dark:text-slate-500">
+      <p v-if="tools_tech?.length" class="mt-2 mb-3 text-sm text-slate-500 dark:text-slate-500">
         {{ tools_tech.join(", ") }}
       </p>
     </div>

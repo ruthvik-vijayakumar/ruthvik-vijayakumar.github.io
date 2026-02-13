@@ -6,13 +6,22 @@
     <div class="space-y-4 text-base text-slate-700 dark:text-slate-300 leading-relaxed">
       <p>
         Ever since I took part in my first hackathon, I fell in love with
-        building products that solve real problems. That first experience of
+        building products that makes a real impact. That first experience of
         turning an idea into something tangible got me hooked, and I've been
         chasing that feeling ever since. Over the years, I've worked across
-        <a href="#" class="underline hover:text-slate-900 dark:hover:text-slate-100" target="_blank" rel="noreferrer noopener">AdTech</a>,
-        <a href="#" class="underline hover:text-slate-900 dark:hover:text-slate-100" target="_blank" rel="noreferrer noopener">F&B</a>,
-        <a href="#" class="underline hover:text-slate-900 dark:hover:text-slate-100" target="_blank" rel="noreferrer noopener">EdTech</a>
+        <a href="#" class="underline hover:text-slate-900 dark:hover:text-slate-100" target="_blank"
+          rel="noreferrer noopener">AdTech</a>,
+        <a href="#" class="underline hover:text-slate-900 dark:hover:text-slate-100" target="_blank"
+          rel="noreferrer noopener">F&B</a>,
+        <a href="#" class="underline hover:text-slate-900 dark:hover:text-slate-100" target="_blank"
+          rel="noreferrer noopener">EdTech</a>
         and with multiple other startups, helping build products that make a real impact.
+      </p>
+      <p>
+        Driven by a lifelong love of cinema, TV, and music, I realized early on that I wanted to move from just
+        consuming content to shaping how it’s delivered. This pushed me to build technology that augments the potential
+        of creators and helps audiences discover experiences that pique their interest - covering the entire lifecycle
+        from creation, consumption, distribution to monetization.
       </p>
       <p>
         My focus is on bridging the gap between tech, design, and business—building
@@ -23,7 +32,8 @@
       <p>
         These days, I've been working on multiple ideas for tech products, but I'm
         actively involved in building a SaaS knowledge management tool powered by
-        LLMs called <a href="https://nabuai.me" class="underline hover:text-slate-900 dark:hover:text-slate-100" target="_blank" rel="noreferrer noopener">NabuAI</a>.
+        LLMs called <a href="https://nabuai.me" class="underline hover:text-slate-900 dark:hover:text-slate-100"
+          target="_blank" rel="noreferrer noopener">NabuAI</a>.
         It's designed to help knowledge workers streamline their workflow and work more efficiently.
       </p>
       <p>

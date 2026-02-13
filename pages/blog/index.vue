@@ -14,11 +14,13 @@ function getPostField(post: BlogPost, key: string): unknown {
   return post[key] ?? (post.meta as Record<string, unknown>)?.[key];
 }
 
-const { data: postsList } = await useAsyncData("blog-list", () =>
+const route = useRoute();
+// Route-specific key so client-side navigation to /blog uses this page's prerendered payload
+const { data: postsList } = await useAsyncData(`blog-list-${route.path}`, () =>
   queryCollection("blog").all(),
 );
 const posts = computed(() => {
-  const items = (Array.isArray(postsList.value) ? postsList.value : []) as BlogPost[];
+  const items = (Array.isArray(postsList.value) ? postsList.value : []) as unknown as BlogPost[];
   return items.sort((a, b) => {
     const da = (getPostField(a, "date") as string) ?? "";
     const db = (getPostField(b, "date") as string) ?? "";

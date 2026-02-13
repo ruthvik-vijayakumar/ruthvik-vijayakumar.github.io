@@ -31,7 +31,7 @@ defineProps({
         {{ roleDescription }}
       </ContentRenderer>
     </div>
-    <ul v-if="skills?.length" class="mt-3 flex flex-wrap gap-2" aria-label="Skills">
+    <ul v-if="skills?.length" class="mt-3 mb-3 flex flex-wrap gap-2" aria-label="Skills">
       <li
         v-for="(skill, i) in skills"
         :key="i"
