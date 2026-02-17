@@ -12,4 +12,4 @@ attachments:
       icon: link
 ---
 
-A Gen-Z-focused, LLM-powered, multi-modal, short-form rich media experience that was immersive and presented articles / videos / podcasts as TL;DRs in the form of stories i.e. Instagram / Snap stories. It also enhanced audience engagement, feed reccomendations, monetization & adoption using collaborative filtering and in-feed contextual advertising.
+A multi-modal news delivery platform that repurposes existing long-form content into immersive, short-form experiences similar to Instagram Stories and TikTok. Powered by LLM's, it creates snackable TL;DR versions of articles, videos, and podcasts tailored for Gen Z consumption. The platform includes personalized content recommendations, in-feed contextual advertising, and comprehensive analytics to drive engagement and revenue for news publishers.
