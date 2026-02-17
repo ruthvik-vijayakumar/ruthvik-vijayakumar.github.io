@@ -1,7 +1,7 @@
 ---
 title: "Spotify Strategic Analysis & Recommendations"
 link: "/spotify-final-report.pdf"
-date: 2024-01-15
+date: 2025-05-08
 type: case_study
 visible: true
 tools_tech:
@@ -9,7 +9,7 @@ tools_tech:
 attachments:
   - label: "Report"
     url: "/spotify-final-report.pdf"
-  - label: "Presentation"
+  - label: "Slides"
     url: "/spotify-presentation.pdf"
 ---
 

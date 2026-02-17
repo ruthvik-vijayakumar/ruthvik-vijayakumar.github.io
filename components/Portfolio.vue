@@ -78,6 +78,7 @@ const filters = [
         :key="project.path ?? project._path ?? index"
         :title="getProjectField(project, 'title') ?? ''"
         :link="getProjectField(project, 'link') ?? ''"
+        :date="getProjectField<string | Date>(project, 'date')"
         :doc="project"
         :tools_tech="(getProjectField(project, 'tools_tech') ?? project.tools_tech) ?? []"
         :attachments="(getProjectField(project, 'attachments') ?? project.attachments) ?? []"

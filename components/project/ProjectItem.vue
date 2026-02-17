@@ -2,11 +2,18 @@
 const props = defineProps({
   title: String,
   link: String,
+  date: [String, Date],
   doc: Object,
   tools_tech: Array,
   attachments: Array,
   itemType: String,
 });
+
+function formatMonthYear(dateVal) {
+  if (dateVal == null || dateVal === "") return null;
+  const d = new Date(dateVal);
+  return Number.isNaN(d.getTime()) ? null : d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+}
 
 const { gtag } = useGtag();
 const expanded = ref(false);
@@ -49,6 +56,9 @@ function onReadMoreClick() {
           {{ title }}
         </a>
       </h3>
+      <p v-if="formatMonthYear(date)" class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        {{ formatMonthYear(date) }}
+      </p>
       <div class="relative mt-1">
         <div
           class="text-base text-slate-600 dark:text-slate-400 leading-relaxed"

@@ -1,7 +1,7 @@
 ---
 title: "WaPOW! - Immersive News Media for the next generation"
 link: "#"
-date: 2024-01-01
+date: 2025-08-16
 type: project
 visible: true
 tools_tech:

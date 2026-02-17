@@ -10,7 +10,7 @@ seo:
 
 ---
 
-## Problem space
+## Problem space & Background
 
 Podcasts are one of the leading formats for content consumption, with the market expected to grow from about USD 30.7 billion in 2024 to over USD 131 billion by 2030 at roughly a 27% CAGR. 
 
@@ -69,7 +69,7 @@ AI‑driven virality and story‑moment detection plus community curation, where
 - “I want viral / trending clips in my interests without hunting across platforms.”
 - “As a creator, I want automatically suggested clips and an easy way to tweak and publish them.”
 
-## Value proposition and differentiation
+## Value proposition
 
 - **Clip-first feed:** Short, self-contained clips optimized for attention and shareability, not full episodes.
 - **AI + human curation:** AI proposes clips and scores virality; users upvote, refine boundaries, add tags, and correct summaries.

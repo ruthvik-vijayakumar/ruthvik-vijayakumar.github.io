@@ -2,7 +2,7 @@
 title: "NabuAI - Knowlege Mangement for Academia"
 link: "https://www.nabuai.me/"
 gh_link: "https://github.com/ruthvik-vijayakumar/nabu-ui"
-date: 2024-06-01
+date: 2025-12-01
 type: project
 visible: true
 tools_tech:
