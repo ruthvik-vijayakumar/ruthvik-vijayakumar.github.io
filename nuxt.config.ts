@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     },
   },
   // nuxt-studio
-  modules: ["@nuxt/image", "@nuxt/content", "nuxt-gtag", "@nuxtjs/mdc"],
+  modules: ["@nuxt/image", "@nuxt/content", "nuxt-gtag", "@nuxtjs/mdc", "nuxt-studio"],
   studio: {
     // Studio admin route (default: '/_studio')
     route: '/_studio',

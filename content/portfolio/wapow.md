@@ -11,7 +11,7 @@ attachments:
       label: GitHub Project
       icon: link
     - label: "Blog Post"
-      url: "/building-news-media-for-next-gen"
+      url: "/blog/building-news-media-for-next-gen"
       icon: link
 ---
 
