@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/building-products-that-scale.md",
+                "file": "Templates/Blog post.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "building-products-that-scale"
+              "title": "Blog post"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/blog/building-products-that-scale.md",
+                "file": "Templates/Blog post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for building-products-that-scale"
+              "title": "Backlinks for Blog post"
             }
           },
           {
@@ -186,10 +186,12 @@
   },
   "active": "8b83a5774df47929",
   "lastOpenFiles": [
+    "content/blog/building-news-media-for-next-gen.md",
+    "docs/BLOGGING-WITH-OBSIDIAN.md",
+    "content/blog/building-products-that-scale.md",
     "content/blog/lessons-shipping-nabuai.md",
     "content/blog/welcome.md",
     "content/experience/automatad.md",
-    "content/blog/building-products-that-scale.md",
     "public/spotify-final-report.pdf",
     "public/profile.png"
   ]

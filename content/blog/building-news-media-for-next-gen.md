@@ -3,7 +3,6 @@ title: Building News Media for the next generation
 date: 2025-02-19
 description: The way we consume news has never been more fragmented — from TikTok explainers to Reddit fact-check threads to 40-minute podcasts. Audiences aren't choosing one format; they're navigating all of them just to understand a single story. This piece traces how that shift happened, and why the burden of stitching it all together has fallen entirely on the reader — and it's exactly what led us to build WaPOW!, a multimodal short-form content platform designed for the way people actually consume information today.
 ---
-
 ### The 60 word morning
 
 I grew up in India, where my daily relationship with news started with a swipe. Every morning, I’d open Inshorts, a news app that compresses each story into a crisp, 60‑word brief and skim through national politics, global crises, and startup funding rounds, maybe a bit of bollywood gossip with that.
