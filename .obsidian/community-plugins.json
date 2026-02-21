@@ -1,5 +1,8 @@
 [
   "github-sync",
   "obsidian-git",
-  "dynamic-outline"
+  "dynamic-outline",
+  "obsidian-hider",
+  "obsidian-minimal-settings",
+  "obsidian-style-settings"
 ]

@@ -3,7 +3,6 @@ title: "Lessons from shipping NabuAI"
 description: "What worked and what didn’t when building an AI-powered knowledge base."
 date: "2025-01-22"
 ---
-
 We’ve been building [NabuAI](https://nabuai.me) – an AI-powered knowledge management tool for researchers and knowledge workers. Here are a few lessons from the first months.
 
 ![Laptop and notes](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80)

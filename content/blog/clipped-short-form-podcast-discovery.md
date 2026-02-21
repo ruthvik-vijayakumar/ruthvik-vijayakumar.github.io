@@ -9,7 +9,6 @@ seo:
   description: A mobile-first podcast discovery platform where users scroll a feed of short, high-signal clips (30–120 seconds) with auto-generated titles, summaries, topics, and “viral potential” scores, sourced from full podcast episodes via RSS/YouTube and user uploads
 
 ---
-
 ## Problem space & Background
 
 Podcasts are one of the leading formats for content consumption, with the market expected to grow from about USD 30.7 billion in 2024 to over USD 131 billion by 2030 at roughly a 27% CAGR. 

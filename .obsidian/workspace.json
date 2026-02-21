@@ -164,13 +164,23 @@
               "icon": "lucide-list",
               "title": "Outline of building-products-that-scale"
             }
+          },
+          {
+            "id": "f5833124886eb8bf",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 410.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,21 +191,25 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "github-sync:Sync with Remote": false
+      "github-sync:Sync with Remote": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "8b83a5774df47929",
   "lastOpenFiles": [
+    "content/blog/lessons-shipping-nabuai.md",
+    "content/blog/clipped-short-form-podcast-discovery.md",
+    "content/blog/building-products-that-scale.md",
+    "content/blog/building-news-media-for-next-gen.md",
+    "content/blog/welcome.md",
+    "README.md",
+    "2025-02-19.md",
     "content/experience/mitter.md",
     "content/experience/learnr.md",
     "content/experience/automatad.md",
     "Templates/Blog post.md",
     "Untitled.canvas",
-    "content/blog/building-news-media-for-next-gen.md",
     "docs/BLOGGING-WITH-OBSIDIAN.md",
-    "content/blog/building-products-that-scale.md",
-    "content/blog/lessons-shipping-nabuai.md",
-    "content/blog/welcome.md",
     "public/spotify-final-report.pdf",
     "public/profile.png"
   ]

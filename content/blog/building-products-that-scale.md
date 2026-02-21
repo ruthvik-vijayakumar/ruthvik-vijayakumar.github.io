@@ -3,7 +3,6 @@ title: "Building products that scale"
 description: "A few principles I've learned from shipping across AdTech, EdTech, and startups."
 date: "2025-01-20"
 ---
-
 When you're building something new, it helps to separate what *scales* from what doesn't. Here’s a short take with concrete examples.
 
 ![Team and whiteboard](https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80)
