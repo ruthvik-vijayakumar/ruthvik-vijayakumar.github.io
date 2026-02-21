@@ -1,3 +1,7 @@
 {
-  "cssTheme": "Minimal"
+  "cssTheme": "Minimal",
+  "showRibbon": false,
+  "showViewHeader": true,
+  "interfaceFontFamily": "",
+  "textFontFamily": "Baskerville"
 }

@@ -44,3 +44,4 @@ Together, these tools try to weave fact-checking into the experience of scrollin
 ### Burden on the Reader
 
 For the average reader, though, the reality is still exhausting. To feel confident about just one important story, you might watch a short clip on Instagram or TikTok, listen to a podcast episode on your commute, skim a couple of articles, and then read through Reddit threads or Community Notes on X to see how others are interpreting and challenging the narrative. Only after this multi-step, multi-platform, multi-format journey do you start to feel like you “get” the story and even then, you might still be unsure what to trust. Our information diet has never been richer in formats, but also never more fragmented and fragile in trust.
+

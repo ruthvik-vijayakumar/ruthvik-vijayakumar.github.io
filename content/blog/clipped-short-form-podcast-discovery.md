@@ -34,7 +34,8 @@ There is room for a listener‑first, clip‑native discovery layer that sits on
 - AI clipping tools for creators – e.g., Flowjin, OpusClip, Descript, VEED help creators turn long-form content into social clips for TikTok/Shorts/Reels.
 - General podcast apps – Spotify, Apple Podcasts, YouTube optimize for full‑episode listening and network lock‑in, not clip‑centric browsing.
 
-#### The Diffrentiator
+### The Differentiator
+
 Listener‑first For You Feed of cross‑show clips, not a note‑taking app or editing SaaS.
 Neutral “clip layer” across platforms that deep‑links out to full episodes, instead of locking people into a single player or only exporting to socials.
 
@@ -42,27 +43,24 @@ AI‑driven virality and story‑moment detection plus community curation, where
 
 
 ## Goals and non‑goals
-
-#### Goals
+### Goals
 
 - Help listeners quickly discover new shows, topics, and stories via short clips instead of full episodes.
 - Enable creators and power users to curate and edit clips, improving AI output over time.
 - Build a data flywheel where engagement signals continuously improve clip quality and recommendations.
-
-#### Non‑goals (v1)
-
+### Non‑goals (v1)
 - Full podcast player and library management (we’ll deep-link to Spotify / Apple Podcasts / YouTube).
 - Advanced video editing suite; focus is discovery, not full production tooling.
 
 ## Target users and use cases
 
-#### Primary users
+### Primary users
 
 - Casual listeners: Want entertaining/insightful clips while scrolling, then follow shows or save episodes.
 - Curious learners: Want topic-based discovery (e.g., “AI in marketing”, “founder stories”).
 - Creators/podcasters: Want more reach and data on which moments resonate.
 
-#### Core use cases
+### Core use cases
 
 - “I have 5 minutes and want to discover something interesting via snackable podcast clips.”
 - “I want viral / trending clips in my interests without hunting across platforms.”
@@ -79,7 +77,7 @@ AI‑driven virality and story‑moment detection plus community curation, where
 :miro-customer-journey
 
 ## Go‑to‑market and marketing efforts
-#### Ideal target segments (sequenced)
+### Ideal target segments (sequenced)
 - Early adopter creators and indie podcasters
     - Pain: need viral clips and better discovery but can’t afford expensive video teams.
     - Tactic: 
@@ -93,7 +91,7 @@ Overlaps with Snipd / productivity community, but with a discovery focus.
 - Agencies and networks
     - Tactic: show case studies on how “clip discovery” increases full‑episode plays and social engagement vs traditional clipping only.
 
-#### Channels & tactics
+### Channels & tactics
 - **Content marketing and case studies:** Write “How we turned 1 hour of podcast into 10K extra listens via clip discovery” breakdowns, benchmarked against existing clipping tools.
 - **Social proof flywheel:** Auto‑generate branded videos for TikTok/Reels with “Discover more clips like this on **Clipped**” overlays, driving organic installs.
 - **Product‑led growth:** Free listener app; creators get basic analytics (top clips, topics) for free, with paid tiers for more depth.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/blog/building-news-media-for-next-gen.md",
+                "file": "content/blog/clipped-short-form-podcast-discovery.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "building-news-media-for-next-gen"
+              "title": "clipped-short-form-podcast-discovery"
             }
           }
         ]
@@ -180,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 410.5
+    "width": 277.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,16 +197,18 @@
   },
   "active": "8b83a5774df47929",
   "lastOpenFiles": [
-    "content/blog/lessons-shipping-nabuai.md",
-    "content/blog/clipped-short-form-podcast-discovery.md",
     "content/blog/building-products-that-scale.md",
-    "content/blog/building-news-media-for-next-gen.md",
+    "content/blog/clipped-short-form-podcast-discovery.md",
+    "content/blog/lessons-shipping-nabuai.md",
     "content/blog/welcome.md",
+    "content/experience/automatad.md",
+    "content/experience/learnr.md",
+    "content/experience/mitter.md",
+    "content/experience/washington-post.md",
+    "content/experience/wheres-the-food.md",
+    "content/blog/building-news-media-for-next-gen.md",
     "README.md",
     "2025-02-19.md",
-    "content/experience/mitter.md",
-    "content/experience/learnr.md",
-    "content/experience/automatad.md",
     "Templates/Blog post.md",
     "Untitled.canvas",
     "docs/BLOGGING-WITH-OBSIDIAN.md",
