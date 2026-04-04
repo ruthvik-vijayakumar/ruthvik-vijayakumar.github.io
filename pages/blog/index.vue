@@ -35,13 +35,13 @@ function formatPostDate(post: BlogPost) {
   return Number.isNaN(date.getTime()) ? null : date;
 }
 
-useSiteTitle("Blog");
-
 useSeoMeta({
   description: "Writing on product, shipping, and building things that matter.",
   ogTitle: "Blog",
   ogDescription: "Writing on product, shipping, and building things that matter.",
 });
+/** After other useSeoMeta so `title` is not cleared by a partial merge */
+useSiteTitle("Blog");
 </script>
 
 <template>
