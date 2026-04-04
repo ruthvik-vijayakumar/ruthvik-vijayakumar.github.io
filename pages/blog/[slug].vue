@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { SITE_TITLE } from "~/composables/useSiteTitle";
+
 const route = useRoute();
 const { data: doc } = await useAsyncData(`blog-${route.path}`, () =>
   queryCollection("blog").path(route.path).first(),
@@ -30,7 +32,14 @@ const docDescription = computed(() => {
 
 const config = useRuntimeConfig();
 
+/** Full `<title>`; must live in this `useSeoMeta` so reactive updates don’t wipe a separate `useSiteTitle` call */
+const documentTitle = computed(() => {
+  if (!doc.value) return `Blog | ${SITE_TITLE}`;
+  return docTitle.value ? `${docTitle.value} | ${SITE_TITLE}` : `Blog | ${SITE_TITLE}`;
+});
+
 useSeoMeta({
+  title: documentTitle,
   description: computed(() => {
     if (!doc.value) return String(config.public.siteDescription ?? "");
     return docDescription.value || String(config.public.siteDescription ?? "");
@@ -60,13 +69,6 @@ useSeoMeta({
     docDate.value ? docDate.value.toISOString() : undefined,
   ),
 });
-
-useSiteTitle(
-  computed(() => {
-    if (!doc.value) return "Blog";
-    return docTitle.value || "Blog";
-  }),
-);
 
 // Table of contents: headings from rendered content
 const contentRef = ref<HTMLElement | null>(null);
