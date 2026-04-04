@@ -34,6 +34,14 @@ function formatPostDate(post: BlogPost) {
   const date = new Date(d as string);
   return Number.isNaN(date.getTime()) ? null : date;
 }
+
+useSiteTitle("Blog");
+
+useSeoMeta({
+  description: "Writing on product, shipping, and building things that matter.",
+  ogTitle: "Blog",
+  ogDescription: "Writing on product, shipping, and building things that matter.",
+});
 </script>
 
 <template>

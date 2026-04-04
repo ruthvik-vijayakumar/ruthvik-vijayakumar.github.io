@@ -23,9 +23,50 @@ const docDate = computed(() => {
   return Number.isNaN(date.getTime()) ? null : date;
 });
 
-useHead({
-  title: docTitle.value ? `${docTitle.value} | Blog` : "Blog",
+const docDescription = computed(() => {
+  const d = getDocField("description");
+  return typeof d === "string" && d.trim() ? d.trim() : "";
 });
+
+const config = useRuntimeConfig();
+
+useSeoMeta({
+  description: computed(() => {
+    if (!doc.value) return String(config.public.siteDescription ?? "");
+    return docDescription.value || String(config.public.siteDescription ?? "");
+  }),
+  ogType: "article",
+  ogTitle: docTitle,
+  ogDescription: computed(() => {
+    if (!doc.value) return String(config.public.siteDescription ?? "");
+    return docDescription.value || String(config.public.siteDescription ?? "");
+  }),
+  ogImage: computed(() => {
+    const base = String(config.public.siteUrl ?? "").replace(/\/$/, "");
+    const defaultPath = String(config.public.defaultOgImage || "/profile.png");
+    const fallback = `${base}${defaultPath.startsWith("/") ? defaultPath : `/${defaultPath}`}`;
+    if (!doc.value) return fallback;
+    if (!docImage.value) return fallback;
+    const path = docImage.value.startsWith("/") ? docImage.value : `/${docImage.value}`;
+    return `${base}${path}`;
+  }),
+  ogImageAlt: docTitle,
+  twitterTitle: docTitle,
+  twitterDescription: computed(() => {
+    if (!doc.value) return String(config.public.siteDescription ?? "");
+    return docDescription.value || String(config.public.siteDescription ?? "");
+  }),
+  articlePublishedTime: computed(() =>
+    docDate.value ? docDate.value.toISOString() : undefined,
+  ),
+});
+
+useSiteTitle(
+  computed(() => {
+    if (!doc.value) return "Blog";
+    return docTitle.value || "Blog";
+  }),
+);
 
 // Table of contents: headings from rendered content
 const contentRef = ref<HTMLElement | null>(null);

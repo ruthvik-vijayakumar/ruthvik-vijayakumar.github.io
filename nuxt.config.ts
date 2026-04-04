@@ -16,6 +16,16 @@ export default defineNuxtConfig({
     public: {
       /** Google Analytics 4 measurement ID (G-XXXXXXXXXX). Set NUXT_PUBLIC_GTAG_ID in .env */
       gtagId: process.env.NUXT_PUBLIC_GTAG_ID || "",
+      /** Canonical site URL (no trailing slash). Override with NUXT_PUBLIC_SITE_URL for custom domains. */
+      siteUrl:
+        process.env.NUXT_PUBLIC_SITE_URL || "https://ruthvik-vijayakumar.github.io",
+      siteName: "Ruthvik Vijayakumar - Your Product Guy",
+      siteDescription:
+        "Technical Product Manager & Full Stack Product Engineer — building products that make a real impact.",
+      /** Default OG/Twitter image path (served from /public). */
+      defaultOgImage: "/profile.png",
+      /** Twitter @handle (no @ in env). */
+      twitterSite: process.env.NUXT_PUBLIC_TWITTER_SITE || "coderuth",
     },
   },
   nitro: {
@@ -44,8 +54,16 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Ruthvik Vijayakumar",
+      title: "Ruthvik Vijayakumar - Your Product Guy",
+      htmlAttrs: {
+        lang: "en",
+      },
       link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon/favicon.ico" },
+        { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon/favicon-16x16.png" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon/favicon-32x32.png" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/favicon/apple-icon-180x180.png" },
+        { rel: "manifest", href: "/favicon/manifest.json" },
         {
           rel: "preconnect",
           href: "https://fonts.googleapis.com",
@@ -63,6 +81,11 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: "leading-relaxed antialiased",
       },
+      meta: [
+        { name: "theme-color", content: "#ffffff" },
+        { name: "msapplication-TileColor", content: "#ffffff" },
+        { name: "msapplication-config", content: "/favicon/browserconfig.xml" },
+      ],
     },
   },
 });
