@@ -104,6 +104,6 @@ Sharing is designed to be contextually rich. When you share a story, you share a
 
 The macro conditions for this product are better now than they have ever been.
 
-The Reuters Institute's 2024 report documents explicitly: "publishers are exploring different formats as a way of addressing the engagement challenge." Two-thirds of the 95,000-person global survey access short news videos weekly. News avoidance is at 39% and rising — not because people don't care, but because the current experience is exhausting. At the same time, the tools to do this — LLMs capable of high-quality summarisation, multimodal embeddings, real-time content APIs — only exist at accessible cost from roughly 2023 onward.
+The Reuters Institute's 2024 report documents explicitly: "publishers are exploring different formats as a way of addressing the engagement challenge." Two-thirds of the 95,000-person global survey access short news videos weekly. News avoidance is at 39% and rising, not because people don't care, but because the current experience is exhausting. At the same time, the tools to do this — LLMs capable of high-quality summarisation, multimodal embeddings, real-time content APIs — only exist at accessible cost from roughly 2023 onward.
 
 The format shift is documented. The audience is there. The infrastructure now exists. What's missing is a product that treats format as the core design decision.

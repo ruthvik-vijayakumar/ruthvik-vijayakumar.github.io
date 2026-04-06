@@ -1,5 +1,5 @@
 ---
-title: "WaPOW! - Immersive News Media for the next generation"
+title: "TunedIn - Immersive News Media for the next generation"
 link: "#"
 date: 2025-08-16
 type: project
@@ -7,11 +7,14 @@ visible: true
 tools_tech:
   ["Vue.js", "WaPo Web API", "Neo4J", "MongoDB", "User Research", "Collaborative Filtering", "Contextual Advertising"]
 attachments:
+    - label: "TunedIn"
+      url: "https://tunedin.live"
+      icon: link
     - url: "https://github.com/ruthvik-vijayakumar/wapow"
       label: GitHub Project
       icon: link
     - label: "Blog Post"
-      url: "/blog/building-news-media-for-next-gen"
+      url: "/blog/rethinking-news-format-for-todays-media-landscape"
       icon: link
 ---
 
