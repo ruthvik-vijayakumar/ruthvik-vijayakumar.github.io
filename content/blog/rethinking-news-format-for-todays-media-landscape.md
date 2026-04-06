@@ -69,11 +69,11 @@ For the average reader, though, the reality is still exhausting. To feel confide
 
 Here's what I learned from the inside.
 
-During my time on the constent & monetization team at The Washington Post, I saw product innovation happening constantly — new subscription flows, engagement experiments, format testing at the article level. What I didn't see was anyone questioning the article itself. The inverted pyramid, the headline, the byline — these are conventions from print journalism that have survived the entire internet era untouched. Publishers have innovated everything around the format: distribution (social, push, email), the business model (subscriptions, paywalls, metered access), the discovery surface (personalisation, notifications). But the atomic unit of news — the article — is structurally identical to what ran in a newspaper in 1975.
+During my time on the constent & monetization team at The Washington Post, I saw product innovation happening constantly, new subscription flows, engagement experiments, format testing at the article level. What I didn't see was anyone questioning the article itself. The inverted pyramid, the headline, the byline, these are conventions from print journalism that have survived the entire internet era untouched. Publishers have innovated everything around the format: distribution (social, push, email), the business model (subscriptions, paywalls, metered access), the discovery surface (personalisation, notifications). But the atomic unit of news, the article, is structurally identical to what ran in a newspaper in 1975.
 
-The referrer data tells the real story. For most major publishers, the top traffic sources are social platforms — feeds and apps built around short-form, visual, swipeable content. The format that actually acquires a reader is TikTok's or Instagram's. The publisher captures them for 90 seconds on an article page, then loses them back to the feed. The audience belongs to the platform, not the publisher. The Reuters Institute's 2024 industry survey confirmed this: publishers said they were planning significant increases in short-form video production for TikTok (+55 net investment score) and YouTube (+44) — not because they're leading the format shift, but because they're chasing an audience that moved without them.
+The referrer data tells the real story. For most major publishers, the top traffic sources are social platforms, feeds and apps built around short-form, visual, swipeable content. The format that actually acquires a reader is TikTok's or Instagram's. The publisher captures them for 90 seconds on an article page, then loses them back to the feed. The audience belongs to the platform, not the publisher. 
 
-Publishers are optimising for the reader they have. Nobody is designing for the reader they're losing.
+The Reuters Institute's 2024 industry survey confirmed this: publishers said they were planning significant increases in short-form video production for TikTok (+55 net investment score) and YouTube (+44) — not because they're leading the format shift, but because they're chasing an audience that moved without them. Publishers are optimising for the reader they have. Nobody is designing for the reader they're losing.
 
 That gap is exactly what led to TunedIn.
 
@@ -91,7 +91,7 @@ The feed learns. TunedIn tracks watch history, scroll depth, interaction signals
 #### The Story Pipeline
 Long-form articles are automatically converted into 3–10 swipeable story slides — Instagram/Snapchat-style — calibrated for mobile-first consumption. The pipeline uses an LLM to extract key sections, generate slide-sized summaries (50–150 words each), and assemble a fixed narrative arc: an intro slide, content slides that alternate text-heavy and media-rich layouts, and a final takeaways slide with three key bullet points.
 
-Slide count scales with article length: short pieces become 3 slides, pieces over 2,000 words hit the 10-slide maximum. Every story passes a quality gate before storage — minimum slide count, verified media coverage, a floor on description length relative to the original article — so nothing gets surfaced half-finished.
+Slide count scales with article length: short pieces become 3 slides, pieces over 2,000 words hit the 10-slide maximum. Every story passes a quality gate before storage, minimum slide count, verified media coverage, a floor on description length relative to the original article — so nothing gets surfaced half-finished.
 
 The same story reported across multiple outlets is stitched together, with sourcing made visible. You see how the BBC framed it, how the Times framed it, and what the difference tells you. Media bias isn't lectured about — it's made observable.
 
